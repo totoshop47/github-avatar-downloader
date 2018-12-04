@@ -26,7 +26,7 @@ function downloadImageByURL(url, filePath) {
   .pipe(fs.createWriteStream(filePath));  // downloading pics from avatar_urls with filename with login values
 }
 
-getRepoContributors("jquery", "jquery", function(err, result) {
+getRepoContributors(arg[0], arg[1], function(err, result) { // take comman line input instead of hardcoded value
   console.log("Errors:", err);
   result.forEach(function(obj) {
     var url = obj.avatar_url; // setting up avatar_urls to variable name url
