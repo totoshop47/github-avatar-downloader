@@ -22,7 +22,7 @@ function getRepoContributors(repoOwner, repoName, cb) {
 }
 
 function downloadImageByURL(url, filePath) {
-  request.get(url);
+  request.get(url)
   .pipe(fs.createWriteStream(filePath));  // downloading pics from avatar_urls with filename with login values
 }
 
